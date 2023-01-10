@@ -1,5 +1,6 @@
 package pages;
 
+import org.junit.Assert;
 import org.openqa.selenium.NoSuchElementException;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
@@ -8,6 +9,7 @@ import org.openqa.selenium.support.PageFactory;
 import utilities.Driver;
 
 public class HomePage {
+
     public HomePage (){
         PageFactory.initElements(Driver.getDriver(),this);
     }
@@ -33,11 +35,9 @@ public class HomePage {
     @FindBy(id = "accept-recommended-btn-handler")
     public WebElement cookieAcceptAll;
 
-    @FindBy(xpath = "//button[@aria-labelledby=\"ot-header-id-C0004\"]")
+    @FindBy(xpath = "//button[@aria-controls=\"ot-desc-id-C0004\"]")
     public WebElement cookieNotNecessary;
-    @FindBy(xpath = "//button[@aria-labelledby=\"ot-header-id-C0004\"][@aria-expanded=\"false\"]")
-    public WebElement cookieNotNecessaryFalse;
-    @FindBy(xpath = "//button[@aria-labelledby=\"ot-header-id-C0004\"][@aria-expanded=\"true\"]")
+    @FindBy(id = "ot-desc-id-C0004")
     public WebElement cookieNotNecessaryTrue;
 
     @FindBy(xpath = "//button[@id=\"accept-recommended-btn-handler\"]")
@@ -97,7 +97,8 @@ public class HomePage {
     //WindowHandle Class ----------------------------------------------------------
     public void otherWindow ( WebElement webElement) {
         String originalWindow = Driver.driver.getWindowHandle();
-        assert Driver.driver.getWindowHandles().size() == 1;
+        //assert Driver.driver.getWindowHandles().size() == 1;
+        Assert.assertEquals(1, Driver.driver.getWindowHandles().size());
         webElement.click(); //buton üzerinden geçiş classı
 
         for (String windowHandle : Driver.driver.getWindowHandles()) {
@@ -106,8 +107,24 @@ public class HomePage {
                 break;
             }
         }
+        Assert.assertEquals(2, Driver.driver.getWindowHandles().size());
     }
     //-----------------------------------------------------------------------------
+
+    public  void closeWindow (){
+        String originalWindow = Driver.driver.getWindowHandle();
+        Assert.assertEquals(2, Driver.driver.getWindowHandles().size());
+        String prevWindow = "";
+        for (String windowHandle : Driver.driver.getWindowHandles()) {
+            if (!originalWindow.contentEquals(windowHandle)) {
+                prevWindow = windowHandle;
+            }
+        }
+        Driver.closeDriver();
+
+        Driver.driver.switchTo().window(prevWindow);
+        Assert.assertEquals(1, Driver.driver.getWindowHandles().size());
+    }
 
 
 

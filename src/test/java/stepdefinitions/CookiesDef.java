@@ -42,8 +42,8 @@ public class CookiesDef {
     }
     @Given("User closes cookies policy tab.")
     public void user_closes_cookies_policy_tab() {
-        Driver.closeDriver();
-        Assert.assertTrue(Driver.driver.getWindowHandles().size() == 1);
+        homePage.closeWindow();
+        homePage.wait(3);
     }
     @Given("User clicks on Hedefleme Amacli Tanimlama Bilgileri field.")
     public void user_clicks_on_hedefleme_amacli_tanimlama_bilgileri_field() {
@@ -55,7 +55,7 @@ public class CookiesDef {
     }
     @Given("User verify that Hedefleme Amacli Tanimlama Bilgileri field detail has been closed.")
     public void user_verify_that_hedefleme_amacli_tanimlama_bilgileri_field_detail_has_been_closed() {
-        Assert.assertTrue(homePage.cookieNotNecessaryFalse.isDisplayed());
+        Assert.assertFalse(homePage.cookieNotNecessaryTrue.isDisplayed());
     }
     @Given("User turns on Hedefleme Amacli Tanimlama Bilgileri cookie.")
     public void user_turns_on_hedefleme_amacli_tanimlama_bilgileri_cookie() {
