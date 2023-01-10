@@ -20,28 +20,40 @@ public class HomePage {
         //@homepage
     @FindBy(id = "onetrust-group-container")
     public WebElement cookiesField;
-    @FindBy(id = "onetrust-pc-btn-handler")
-    public WebElement cookieSettings;
-    @FindBy(xpath = "//a[text()=\"Çerez Politikası\"]") //TODO: handle gerekli
+    @FindBy(xpath = "//a[text()=\"Çerez Politikası\"]")
     public WebElement cookiePolicy;
     @FindBy(id = "onetrust-accept-btn-handler")
     public WebElement cookieAccept;
-    @FindBy(xpath = "//a[text()=\"Daha Fazla Bilgi\"]") //TODO: handle gerekli
+    @FindBy(id = "onetrust-pc-btn-handler")
+    public WebElement cookieSettings;
+    @FindBy(id = "ot-pc-title")
+    public WebElement cookieSettingsTitle;
+    @FindBy(xpath = "//a[@class=\"privacy-notice-link\"]")
     public WebElement cookieMoreInfo;
     @FindBy(id = "accept-recommended-btn-handler")
     public WebElement cookieAcceptAll;
+
+    @FindBy(xpath = "//button[@aria-labelledby=\"ot-header-id-C0004\"]")
+    public WebElement cookieNotNecessary;
     @FindBy(xpath = "//button[@aria-labelledby=\"ot-header-id-C0004\"][@aria-expanded=\"false\"]")
     public WebElement cookieNotNecessaryFalse;
     @FindBy(xpath = "//button[@aria-labelledby=\"ot-header-id-C0004\"][@aria-expanded=\"true\"]")
     public WebElement cookieNotNecessaryTrue;
+
+    @FindBy(xpath = "//button[@id=\"accept-recommended-btn-handler\"]")
+    public WebElement cookieNotNecessaryButton;
     @FindBy(xpath = "//button[@id=\"accept-recommended-btn-handler\"][@style=\"display: inline-block;\"]")
     public WebElement cookieNotNecessaryDecline;
     @FindBy(xpath = "//button[@id=\"accept-recommended-btn-handler\"][@style=\"display: none;\"]")
     public WebElement cookieNotNecessaryAccept;
+
+    @FindBy(xpath = "//button[@aria-labelledby=\"ot-header-id-C0001\"]")
+    public WebElement cookieNecessary;
     @FindBy(xpath = "//button[@aria-labelledby=\"ot-header-id-C0001\"][@aria-expanded=\"false\"]")
     public WebElement cookieNecessaryFalse;
     @FindBy(xpath = "//button[@aria-labelledby=\"ot-header-id-C0001\"][@aria-expanded=\"true\"]")
     public WebElement cookieNecessaryTrue;
+
     @FindBy(xpath = "//button[text()=\"Çerez ayarlarımı kaydet\"]")
     public WebElement cookieSettingsAccept;
 
@@ -86,7 +98,7 @@ public class HomePage {
     public void otherWindow ( WebElement webElement) {
         String originalWindow = Driver.driver.getWindowHandle();
         assert Driver.driver.getWindowHandles().size() == 1;
-        webElement.click();
+        webElement.click(); //buton üzerinden geçiş classı
 
         for (String windowHandle : Driver.driver.getWindowHandles()) {
             if (!originalWindow.contentEquals(windowHandle)) {
