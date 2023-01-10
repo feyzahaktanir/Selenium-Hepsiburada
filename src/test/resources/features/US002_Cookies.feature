@@ -5,8 +5,7 @@ Feature: US002 - User can accept or reject cookies.
     Given User goes to homepage.
     * User verifies that Cookies popup is visible.
     * User accesses the cookie policy.
-    * User verify access to cookie policy page in new tab.
-    * User closes cookie policy tab.
+    * User verify access to cookie policy page.
     * User closes the browser.
 
   @US002TC02
