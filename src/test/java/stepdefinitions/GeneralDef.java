@@ -10,9 +10,9 @@ public class GeneralDef {
 
     HomePage homePage = new HomePage();
 
-    @Given("User goes to {string}.")
-    public void user_goes_to(String url) {
-        Driver.getDriver().get(ConfigReader.getProperty(url));
+    @Given("User goes to homepage.")
+    public void user_goes_to_homepage() {
+        Driver.getDriver().get(ConfigReader.getProperty("homepage"));
     }
     @Given("User verifies that hepsiburada logo is visible.")
     public void user_verifies_that_hepsiburada_logo_is_visible() {
