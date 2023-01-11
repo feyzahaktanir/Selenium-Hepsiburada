@@ -34,23 +34,16 @@ public class HomePage {
     public WebElement cookieMoreInfo;
     @FindBy(id = "accept-recommended-btn-handler")
     public WebElement cookieAcceptAll;
-
     @FindBy(xpath = "//button[@aria-controls=\"ot-desc-id-C0004\"]")
     public WebElement cookieNotNecessary;
     @FindBy(id = "ot-desc-id-C0004")
     public WebElement cookieNotNecessaryTrue;
-
     @FindBy(id = "ot-group-id-C0004")
     public WebElement cookieNotNecessaryButton;
-
-
     @FindBy(xpath = "//button[@aria-labelledby=\"ot-header-id-C0001\"]")
     public WebElement cookieNecessary;
-    @FindBy(xpath = "//button[@aria-labelledby=\"ot-header-id-C0001\"][@aria-expanded=\"false\"]")
-    public WebElement cookieNecessaryFalse;
-    @FindBy(xpath = "//button[@aria-labelledby=\"ot-header-id-C0001\"][@aria-expanded=\"true\"]")
+    @FindBy(id = "ot-desc-id-C0001")
     public WebElement cookieNecessaryTrue;
-
     @FindBy(xpath = "//button[text()=\"Çerez ayarlarımı kaydet\"]")
     public WebElement cookieSettingsAccept;
 

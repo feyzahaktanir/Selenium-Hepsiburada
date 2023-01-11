@@ -20,7 +20,10 @@ Feature: US002 - User can accept or reject cookies.
     * User verify that Hedefleme Amacli Tanimlama Bilgileri field detail has been opened.
     * User clicks on Hedefleme Amacli Tanimlama Bilgileri field.
     * User verify that Hedefleme Amacli Tanimlama Bilgileri field detail has been closed.
+    * User clicks Hedefleme Amacli Tanimlama Bilgileri cookie button.
     * User turns on Hedefleme Amacli Tanimlama Bilgileri cookie.
+    * User verify that Tumunu Kabul et button is not visible.
+    * User clicks Hedefleme Amacli Tanimlama Bilgileri cookie button.
     * User turns off Hedefleme Amacli Tanimlama Bilgileri cookie.
     * User clicks on Zorunlu Tanimlama Bilgileri field.
     * User verify that Zorunlu Tanimlama Bilgileri field detail has been opened.

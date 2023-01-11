@@ -53,7 +53,6 @@ public class CookiesDef {
     }
     @Given("User clicks on Hedefleme Amacli Tanimlama Bilgileri field.")
     public void user_clicks_on_hedefleme_amacli_tanimlama_bilgileri_field() {
-        homePage.wait(7);
         try {
             homePage.cookieNotNecessary.click();
         }
@@ -61,6 +60,7 @@ public class CookiesDef {
             JavascriptExecutor executor = (JavascriptExecutor) Driver.driver;
             executor.executeScript("arguments[0].click();", homePage.cookieNotNecessary);
         }
+        homePage.wait(3);
     }
     @Given("User verify that Hedefleme Amacli Tanimlama Bilgileri field detail has been opened.")
     public void user_verify_that_hedefleme_amacli_tanimlama_bilgileri_field_detail_has_been_opened() {
@@ -70,31 +70,52 @@ public class CookiesDef {
     public void user_verify_that_hedefleme_amacli_tanimlama_bilgileri_field_detail_has_been_closed() {
         Assert.assertFalse(homePage.cookieNotNecessaryTrue.isDisplayed());
     }
+    @Given("User clicks Hedefleme Amacli Tanimlama Bilgileri cookie button.")
+    public void user_clicks_hedefleme_amacli_tanimlama_bilgileri_cookie_button() {
+        try {
+            homePage.cookieNotNecessaryButton.click();
+        }
+        catch (Exception e){
+            JavascriptExecutor executor = (JavascriptExecutor) Driver.driver;
+            executor.executeScript("arguments[0].click();", homePage.cookieNotNecessaryButton);
+        }
+        homePage.wait(3);
+    }
     @Given("User turns on Hedefleme Amacli Tanimlama Bilgileri cookie.")
     public void user_turns_on_hedefleme_amacli_tanimlama_bilgileri_cookie() {
-        homePage.cookieNotNecessaryButton.click();
         Assert.assertTrue(homePage.cookieNotNecessaryButton.isSelected());
     }
     @Given("User turns off Hedefleme Amacli Tanimlama Bilgileri cookie.")
     public void user_turns_off_hedefleme_amacli_tanimlama_bilgileri_cookie() {
-        homePage.cookieNotNecessaryButton.click();
         Assert.assertFalse(homePage.cookieNotNecessaryButton.isSelected());
     }
     @Given("User clicks on Zorunlu Tanimlama Bilgileri field.")
     public void user_clicks_on_zorunlu_tanimlama_bilgileri_field() {
-        homePage.cookieNecessary.click();
+        try {
+            homePage.cookieNecessary.click();
+        }
+        catch (Exception e){
+            JavascriptExecutor executor = (JavascriptExecutor) Driver.driver;
+            executor.executeScript("arguments[0].click();", homePage.cookieNecessary);
+        }
+        homePage.wait(3);
     }
     @Given("User verify that Zorunlu Tanimlama Bilgileri field detail has been opened.")
     public void user_verify_that_zorunlu_tanimlama_bilgileri_field_detail_has_been_opened() {
         Assert.assertTrue(homePage.cookieNecessaryTrue.isDisplayed());
     }
+    @Given("User verify that Tumunu Kabul et button is not visible.")
+    public void user_verify_that_tumunu_kabul_et_button_is_not_visible() {
+        Assert.assertFalse(homePage.cookieAcceptAll.isDisplayed());
+    }
     @Given("User verify that Zorunlu Tanimlama Bilgileri field detail has been closed.")
     public void user_verify_that_zorunlu_tanimlama_bilgileri_field_detail_has_been_closed() {
-        Assert.assertTrue(homePage.cookieNecessaryFalse.isDisplayed());
+        Assert.assertFalse(homePage.cookieNecessaryTrue.isDisplayed());
     }
     @Given("User clicks cerez Ayarlarimi Kaydet button.")
     public void user_clicks_cerez_ayarlarimi_kaydet_button() {
         homePage.cookieSettingsAccept.click();
+        homePage.wait(3);
     }
     @Given("User verify that Cookies Settings popup is not visible.")
     public void user_verify_that_cookies_settings_popup_is_not_visible() {
