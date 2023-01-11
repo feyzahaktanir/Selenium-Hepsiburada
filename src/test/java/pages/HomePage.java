@@ -159,5 +159,10 @@ public class HomePage {
     @FindBy(xpath = "//div[@class=\"hb-AxhVE FCk scuy8ndz9zp\"]")
     public WebElement loginNewLoginMethodAlert_Close;
 
+    @FindBy(id = "btnLogin")
+    public WebElement loginButtonUsername;
+    @FindBy(id = "btnEmailSelect")
+    public WebElement loginButtonPassword;
+
     //-----------------------------------------------------------------------------
 }
