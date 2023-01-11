@@ -146,10 +146,18 @@ public class HomePage {
     public WebElement loginButton;
     @FindBy(xpath = "//button[@id=\"btnLogin\"]")
     public WebElement loginTitle;
-//    @FindBy()
-//    public WebElement cookiePolicyTitle;
-//    @FindBy()
-//    public WebElement cookiePolicyTitle;
+
+    @FindBy(xpath = "//input[@id=\"txtUserName\"]")
+    public WebElement loginUsernameText;
+    @FindBy(xpath = "//div[@id=\"txtUserName\"]")
+    public WebElement loginUsernameAlert;
+    @FindBy(xpath = "//div[text()=\"E-posta adresinizi veya telefon numaranızı girmelisiniz.\"]")
+    public WebElement loginUsernameAlert_Text;
+
+    @FindBy(xpath = "//div[text()=\"Yeni giriş yöntemi!\"]")
+    public WebElement loginNewLoginMethodAlert;
+    @FindBy(xpath = "//div[@class=\"hb-AxhVE FCk scuy8ndz9zp\"]")
+    public WebElement loginNewLoginMethodAlert_Close;
 
     //-----------------------------------------------------------------------------
 }
