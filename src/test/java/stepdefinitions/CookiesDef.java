@@ -3,15 +3,8 @@ package stepdefinitions;
 import io.cucumber.java.en.Given;
 import org.junit.Assert;
 import org.openqa.selenium.JavascriptExecutor;
-import org.openqa.selenium.WebElement;
-import org.openqa.selenium.interactions.Actions;
-import org.openqa.selenium.support.ui.ExpectedConditions;
-import org.openqa.selenium.support.ui.WebDriverWait;
 import pages.HomePage;
 import utilities.Driver;
-
-import javax.swing.*;
-import java.time.Duration;
 
 public class CookiesDef {
     HomePage homePage = new HomePage();
@@ -38,9 +31,8 @@ public class CookiesDef {
     public void user_verifies_that_cookies_settings_popup_is_visible() {homePage.wait(5);
         Assert.assertTrue(homePage.cookieSettingsTitle.isDisplayed());
     }
-
-    @Given("User clicks Daha Fazla Bilgi button.")
-    public void user_clicks_daha_fazla_bilgi_button() {
+    @Given("User clicks Daha Fazla Bilgi button in cookie settings.")
+    public void user_clicks_daha_fazla_bilgi_button_in_cookie_settings() {
         homePage.otherWindow(homePage.cookieMoreInfo);
     }
     @Given("User verify cookies policy page in new tab.")
@@ -112,9 +104,14 @@ public class CookiesDef {
     public void user_verify_that_zorunlu_tanimlama_bilgileri_field_detail_has_been_closed() {
         Assert.assertFalse(homePage.cookieNecessaryTrue.isDisplayed());
     }
-    @Given("User clicks cerez Ayarlarimi Kaydet button.")
-    public void user_clicks_cerez_ayarlarimi_kaydet_button() {
+    @Given("User clicks Cerez Ayarlarimi Kaydet button in cookie settings.")
+    public void user_clicks_cerez_ayarlarimi_kaydet_button_in_cookie_settings() {
         homePage.cookieSettingsAccept.click();
+        homePage.wait(3);
+    }
+    @Given("User clicks Tumunu Kabul Et button in cookie settings.")
+    public void user_clicks_tumunu_kabul_et_button_in_cookie_settings() {
+        homePage.cookieAcceptAll.click();
         homePage.wait(3);
     }
     @Given("User verify that Cookies Settings popup is not visible.")
@@ -123,7 +120,23 @@ public class CookiesDef {
     }
     @Given("User verify that Cookies popup is not visible.")
     public void user_verify_that_cookies_popup_is_not_visible() {
+        homePage.wait(3);
         Assert.assertFalse(homePage.cookiesField.isDisplayed());
     }
-
+    @Given("User clicks cookie settings close button.")
+    public void user_clicks_cookie_settings_close_button() {
+        homePage.cookieSettingsClose.click();
+    }
+    @Given("User verify that Cookies Settings popup is visible.")
+    public void user_verify_that_cookies_settings_popup_is_visible() {
+        Assert.assertTrue(homePage.cookieSettingsTitle.isDisplayed());
+    }
+    @Given("User verify that Cookies popup is visible.")
+    public void user_verify_that_cookies_popup_is_visible() {
+        Assert.assertTrue(homePage.cookiesField.isDisplayed());
+    }
+    @Given("User clicks Kabul Et button in cookies popup.")
+    public void user_clicks_kabul_et_button_in_cookies_popup() {
+        homePage.cookieAccept.click();
+    }
 }

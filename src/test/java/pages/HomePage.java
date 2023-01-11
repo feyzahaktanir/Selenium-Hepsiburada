@@ -46,6 +46,8 @@ public class HomePage {
     public WebElement cookieNecessaryTrue;
     @FindBy(xpath = "//button[text()=\"Çerez ayarlarımı kaydet\"]")
     public WebElement cookieSettingsAccept;
+    @FindBy(id = "close-pc-btn-handler")
+    public WebElement cookieSettingsClose;
 
         //@cookiespolicypage
     @FindBy(xpath = "//h2[text()=\"Çerez Politikası\"]")
