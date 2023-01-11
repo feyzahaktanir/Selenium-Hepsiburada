@@ -40,12 +40,9 @@ public class HomePage {
     @FindBy(id = "ot-desc-id-C0004")
     public WebElement cookieNotNecessaryTrue;
 
-    @FindBy(xpath = "//button[@id=\"accept-recommended-btn-handler\"]")
+    @FindBy(id = "ot-group-id-C0004")
     public WebElement cookieNotNecessaryButton;
-    @FindBy(xpath = "//button[@id=\"accept-recommended-btn-handler\"][@style=\"display: inline-block;\"]")
-    public WebElement cookieNotNecessaryDecline;
-    @FindBy(xpath = "//button[@id=\"accept-recommended-btn-handler\"][@style=\"display: none;\"]")
-    public WebElement cookieNotNecessaryAccept;
+
 
     @FindBy(xpath = "//button[@aria-labelledby=\"ot-header-id-C0001\"]")
     public WebElement cookieNecessary;
@@ -111,6 +108,9 @@ public class HomePage {
     }
     //-----------------------------------------------------------------------------
 
+
+
+    //WindowHandle Back Class -----------------------------------------------------
     public  void closeWindow (){
         String originalWindow = Driver.driver.getWindowHandle();
         Assert.assertEquals(2, Driver.driver.getWindowHandles().size());
@@ -125,6 +125,7 @@ public class HomePage {
         Driver.driver.switchTo().window(prevWindow);
         Assert.assertEquals(1, Driver.driver.getWindowHandles().size());
     }
+    //-----------------------------------------------------------------------------
 
 
 

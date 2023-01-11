@@ -2,10 +2,16 @@ package stepdefinitions;
 
 import io.cucumber.java.en.Given;
 import org.junit.Assert;
+import org.openqa.selenium.JavascriptExecutor;
+import org.openqa.selenium.WebElement;
+import org.openqa.selenium.interactions.Actions;
+import org.openqa.selenium.support.ui.ExpectedConditions;
+import org.openqa.selenium.support.ui.WebDriverWait;
 import pages.HomePage;
 import utilities.Driver;
 
 import javax.swing.*;
+import java.time.Duration;
 
 public class CookiesDef {
     HomePage homePage = new HomePage();
@@ -26,9 +32,10 @@ public class CookiesDef {
     @Given("User clicks cookies setting.")
     public void user_clicks_cookies_setting() {
         homePage.cookieSettings.click();
+        homePage.wait(5);
     }
     @Given("User verifies that Cookies Settings popup is visible.")
-    public void user_verifies_that_cookies_settings_popup_is_visible() {
+    public void user_verifies_that_cookies_settings_popup_is_visible() {homePage.wait(5);
         Assert.assertTrue(homePage.cookieSettingsTitle.isDisplayed());
     }
 
@@ -43,11 +50,17 @@ public class CookiesDef {
     @Given("User closes cookies policy tab.")
     public void user_closes_cookies_policy_tab() {
         homePage.closeWindow();
-        homePage.wait(3);
     }
     @Given("User clicks on Hedefleme Amacli Tanimlama Bilgileri field.")
     public void user_clicks_on_hedefleme_amacli_tanimlama_bilgileri_field() {
-        homePage.cookieNotNecessary.click();
+        homePage.wait(7);
+        try {
+            homePage.cookieNotNecessary.click();
+        }
+        catch (Exception e){
+            JavascriptExecutor executor = (JavascriptExecutor) Driver.driver;
+            executor.executeScript("arguments[0].click();", homePage.cookieNotNecessary);
+        }
     }
     @Given("User verify that Hedefleme Amacli Tanimlama Bilgileri field detail has been opened.")
     public void user_verify_that_hedefleme_amacli_tanimlama_bilgileri_field_detail_has_been_opened() {
@@ -59,11 +72,13 @@ public class CookiesDef {
     }
     @Given("User turns on Hedefleme Amacli Tanimlama Bilgileri cookie.")
     public void user_turns_on_hedefleme_amacli_tanimlama_bilgileri_cookie() {
-        Assert.assertTrue(homePage.cookieNotNecessaryAccept.isDisplayed());
+        homePage.cookieNotNecessaryButton.click();
+        Assert.assertTrue(homePage.cookieNotNecessaryButton.isSelected());
     }
     @Given("User turns off Hedefleme Amacli Tanimlama Bilgileri cookie.")
     public void user_turns_off_hedefleme_amacli_tanimlama_bilgileri_cookie() {
-        Assert.assertTrue(homePage.cookieNotNecessaryDecline.isDisplayed());
+        homePage.cookieNotNecessaryButton.click();
+        Assert.assertFalse(homePage.cookieNotNecessaryButton.isSelected());
     }
     @Given("User clicks on Zorunlu Tanimlama Bilgileri field.")
     public void user_clicks_on_zorunlu_tanimlama_bilgileri_field() {
