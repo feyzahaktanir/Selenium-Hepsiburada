@@ -1,6 +1,6 @@
 Feature: US001 - Homepage Accessibility
 
-  @homepage @US001TC01
+  @US001TC01 @US001
   Scenario: TC01 - Homepage must be accessible.
     Given User goes to homepage.
     * User verifies that hepsiburada logo is visible.

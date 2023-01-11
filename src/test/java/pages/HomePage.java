@@ -124,4 +124,32 @@ public class HomePage {
 
 
 
+    //Sign Up Locations -----------------------------------------------------------
+    @FindBy(xpath = "//div[@id=\"myAccount\"]")
+    public WebElement loginOrSignup;
+    @FindBy(xpath = "//a[@id=\"register\"]")
+    public WebElement signupButton;
+    @FindBy(xpath = "//button[@id=\"btnSignUpSubmit\"]")
+    public WebElement signupTitle;
+//    @FindBy()
+//    public WebElement cookiePolicyTitle;
+//    @FindBy()
+//    public WebElement cookiePolicyTitle;
+    //TODO: yarım kaldı tamamlanacak.
+
+    //-----------------------------------------------------------------------------
+
+
+
+    //Login Locations -----------------------------------------------------------
+    @FindBy(xpath = "//a[@id=\"login\"]")
+    public WebElement loginButton;
+    @FindBy(xpath = "//button[@id=\"btnLogin\"]")
+    public WebElement loginTitle;
+//    @FindBy()
+//    public WebElement cookiePolicyTitle;
+//    @FindBy()
+//    public WebElement cookiePolicyTitle;
+
+    //-----------------------------------------------------------------------------
 }
