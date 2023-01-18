@@ -48,185 +48,39 @@
             <scope>test</scope>
         </dependency>
 
-<!--        &lt;!&ndash; https://mvnrepository.com/artifact/com.github.javafaker/javafaker &ndash;&gt;
         <dependency>
-            <groupId>com.github.javafaker</groupId>
-            <artifactId>javafaker</artifactId>
-            <version>1.0.2</version>
-        </dependency>
-        &lt;!&ndash; https://mvnrepository.com/artifact/org.apache.poi/poi &ndash;&gt;
-        <dependency>
-            <groupId>org.apache.poi</groupId>
-            <artifactId>poi</artifactId>
-            <version>5.2.2</version>
-        </dependency>
-        &lt;!&ndash; https://mvnrepository.com/artifact/org.apache.poi/poi-ooxml &ndash;&gt;
-        <dependency>
-            <groupId>org.apache.poi</groupId>
-            <artifactId>poi-ooxml</artifactId>
-            <version>5.2.2</version>
-        </dependency>
-        &lt;!&ndash; https://mvnrepository.com/artifact/org.apache.commons/commons-compress &ndash;&gt;
-        <dependency>
-            <groupId>org.apache.commons</groupId>
-            <artifactId>commons-compress</artifactId>
-            <version>1.21</version>
-        </dependency>
-        &lt;!&ndash; https://mvnrepository.com/artifact/com.aventstack/extentreports &ndash;&gt;
-        <dependency>
-            <groupId>com.aventstack</groupId>
-            <artifactId>extentreports</artifactId>
-            <version>5.0.9</version>
-        </dependency>
-        &lt;!&ndash; https://mvnrepository.com/artifact/com.itextpdf/itextpdf &ndash;&gt;
-        <dependency>
-            <groupId>com.itextpdf</groupId>
-            <artifactId>itextpdf</artifactId>
-            <version>5.5.13.3</version>
-        </dependency>
-
-
-
-        &lt;!&ndash; https://mvnrepository.com/artifact/com.fasterxml.jackson.core/jackson-databind
-        <dependency>
-            <groupId>com.fasterxml.jackson.core</groupId>
-            <artifactId>jackson-databind</artifactId>
-            <version>2.13.1</version>
-        </dependency>
-&ndash;&gt;
-        &lt;!&ndash; Buradan asagida kalan kisim api icin &ndash;&gt;
-        <dependency>
-            <groupId>io.rest-assured</groupId>  &lt;!&ndash; Temel API Test kutuphanelerini icerir &ndash;&gt;
-            <artifactId>rest-assured</artifactId>
-            <version>4.3.0</version>
-        </dependency>
-        &lt;!&ndash; <dependency>
-             <groupId>io.rest-assured</groupId>
-             <artifactId>rest-assured</artifactId>
-             <version>4.5.1</version>
-             <scope>test</scope>
-         </dependency>  &ndash;&gt;
-        &lt;!&ndash; https://mvnrepository.com/artifact/org.json/json &ndash;&gt;
-        <dependency>
-            <groupId>org.json</groupId> &lt;!&ndash; Json objenin icinde gezebilmemizi saglayan jsonPath ile test case'den gelen datayi icine koymaya yarayan JSONObject buradan gelir&ndash;&gt;
-            <artifactId>json</artifactId>
-            <version>20211205</version>
-        </dependency>
-        &lt;!&ndash; https://mvnrepository.com/artifact/com.fasterxml.jackson.core/jackson-databind &ndash;&gt;
-        <dependency>
-            <groupId>com.fasterxml.jackson.core</groupId>
-            <artifactId>jackson-databind</artifactId>
-            <version>2.13.1</version>
-        </dependency>
-        <dependency>
-            <groupId>com.google.code.gson</groupId> &lt;!&ndash; GSON ile De-Serialization, Serialization yapmayi saglar&ndash;&gt;
-            <artifactId>gson</artifactId>
-            <version>2.9.0</version>
-        </dependency>
-        &lt;!&ndash; GSON ile Object Mapper ayni isi yapar, birbirinin alternatifidir, bbirini bbilmen ve interview'de anlatman yeterlidir&ndash;&gt;
-        <dependency>
-            <groupId>org.codehaus.jackson</groupId>  &lt;!&ndash; Object Mapper ile De-Serialization, Serialization yapmayi saglar&ndash;&gt;
-            <artifactId>jackson-mapper-asl</artifactId>
-            <version>1.9.13</version>
-        </dependency>
-        <dependency>
-            <groupId>org.codehaus.jackson</groupId>
-            <artifactId>jackson-core-asl</artifactId>
-            <version>1.9.13</version>
-        </dependency>
-        <dependency>
-            <groupId>org.junit.jupiter</groupId>
-            <artifactId>junit-jupiter</artifactId>
-            <version>RELEASE</version>
+            <groupId>junit</groupId>
+            <artifactId>junit</artifactId>
+            <version>4.13</version>
             <scope>test</scope>
         </dependency>
-        &lt;!&ndash; Buradan asagida kalan kisim db icin &ndash;&gt;
-        <dependency>
-            <groupId>com.microsoft.sqlserver</groupId>
-            <artifactId>mssql-jdbc</artifactId>
-            <version>8.2.2.jre8</version>
-        </dependency>
-
-        <dependency>
-            <groupId>org.postgresql</groupId>
-            <artifactId>postgresql</artifactId>
-            <version>42.2.8</version>
-        </dependency>
-
-        <dependency>
-            <groupId>org.projectlombok</groupId>
-            <artifactId>lombok</artifactId>
-            <version>1.18.22</version>
-        </dependency>
-
-        <dependency>
-            <groupId>io.github.javiercanillas</groupId>
-            <artifactId>jackson-masker</artifactId>
-            <version>0.9.8</version>
-        </dependency>
-
-        &lt;!&ndash; https://mvnrepository.com/artifact/net.masterthought/cucumber-reporting &ndash;&gt;
         <dependency>
             <groupId>net.masterthought</groupId>
             <artifactId>cucumber-reporting</artifactId>
-            <version>5.0.0</version>
-        </dependency>-->
+            <version>5.3.0</version>
+        </dependency>
+
     </dependencies>
 
- <!--   <build>
+    <build>
         <plugins>
             <plugin>
                 <groupId>org.apache.maven.plugins</groupId>
-                <artifactId>maven-failsafe-plugin</artifactId>
-                <version>3.0.0-M1</version>
-                <configuration>
-                    <testFailureIgnore>true</testFailureIgnore>
-                    <skipTests>false</skipTests>
-                    <includes>
-                        <include>**/runners/Runner.java</include> &lt;!&ndash; bunu iz elimmizle kendimmize gore duzeltiyoruz, case sensitive'dir&ndash;&gt;
-                    </includes>
-                </configuration>
-            </plugin>
-
-
-            <plugin>
-                <groupId>org.apache.maven.plugins</groupId>
                 <artifactId>maven-surefire-plugin</artifactId>
-                <version>3.0.0-M7</version>
+                <version>3.0.0-M4</version>
                 <configuration>
-                    <parallel>classes</parallel>
-                    <forkMode>perthread</forkMode>
-                    <threadCount>2</threadCount>
-                    <reuseForks>false</reuseForks>
-                    <argLine>-Duser.language=en</argLine>
-                    <argLine>-Xmx1024m</argLine>
-                    <argLine>-XX:MaxPermSize=256m</argLine>
-                    <argLine>-Dfile.encoding=UTF-8</argLine>
-                    <useFile>false</useFile>
-                    <includes>
-                        <include>**/runner/Runner.java</include> &lt;!&ndash; burada degisiklik yapılacak &ndash;&gt;
-                    </includes>
                     <testFailureIgnore>true</testFailureIgnore>
+                    <argLine>-Xmx512m</argLine>
+                    <includes>
+                        <include>**/src/test/java/runner/Runner.java</include>
+                    </includes>
                 </configuration>
             </plugin>
-
-
-            <plugin>
-                <groupId>org.apache.maven.plugins</groupId>
-                <artifactId>maven-compiler-plugin</artifactId>
-                <version>3.6.1</version>
-                <configuration>
-                    <encoding>UTF-8</encoding>
-                    <source>11</source>
-                    <target>11</target>
-                </configuration>
-            </plugin>
-
 
             <plugin>
                 <groupId>net.masterthought</groupId>
-                <artifactId>maven-cucumber-reporting</artifactId>
-                <version>5.0.0</version>
+                <artifactId>cucumber-reporting</artifactId>
+                <version>5.3.0</version>
                 <executions>
                     <execution>
                         <id>execution</id>
@@ -234,22 +88,11 @@
                         <goals>
                             <goal>generate</goal>
                         </goals>
-                        <configuration>
-                            <projectName>cucumber-jvm-example</projectName>
-                            <outputDirectory>${project.build.directory}</outputDirectory>
-                            <inputDirectory>${project.build.directory}</inputDirectory>
-                            <jsonFiles>
-                                <param>**/json-reports/*.json</param>  &lt;!&ndash; &lt;!&ndash; burada degisiklik yapılacak &ndash;&gt;&ndash;&gt;
-                            </jsonFiles><classificationFiles>
-                            <param>sample.properties</param>
-                            <param>other.properties</param>
-                        </classificationFiles>
-                        </configuration>
                     </execution>
                 </executions>
             </plugin>
-
         </plugins>
-    </build>-->
+    </build>
+
 
 </project>
