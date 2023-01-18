@@ -33,8 +33,7 @@ public class LoginDef {
     }
     @Given("User {string} enters in Password textbox.")
     public void user_enters_in_password_textbox(String string) {
-        // Write code here that turns the phrase above into concrete actions
-        throw new io.cucumber.java.PendingException();
+
     }
     @Given("User sees an alert that {string}.")
     public void user_sees_an_alert_that(String string) {
