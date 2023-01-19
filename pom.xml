@@ -69,11 +69,9 @@
                 <configuration>
                     <testFailureIgnore>true</testFailureIgnore>
                     <argLine>-Xmx512m</argLine>
-                    <test>
-                        <includes>
-                            <include>**/src/test/java/runner/Runner.java</include>
-                        </includes>
-                    </test>
+                    <includes>
+                        <include>**/src/test/java/runner/Runner.java</include>
+                    </includes>
                 </configuration>
             </plugin>
 
