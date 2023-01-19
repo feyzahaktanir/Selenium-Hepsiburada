@@ -9,10 +9,8 @@
     <version>1.0-SNAPSHOT</version>
 
     <properties>
-        <maven.compiler.source>18
-        </maven.compiler.source>
-        <maven.compiler.target>18
-        </maven.compiler.target>
+        <maven.compiler.target>1.8</maven.compiler.target>
+        <maven.compiler.source>1.8</maven.compiler.source>
         <project.build.sourceEncoding>UTF-8
         </project.build.sourceEncoding>
         <jenkins-test-harness.version>2.34</jenkins-test-harness.version>
