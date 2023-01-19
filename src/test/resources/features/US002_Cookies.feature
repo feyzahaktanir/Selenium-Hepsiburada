@@ -1,6 +1,6 @@
 Feature: US002 - User can accept or reject cookies.
 
-  @US002TC01 @US002
+  @US002TC01 @US002 @jenkins
   Scenario: TC01 - User should be able to access the cookie policy.
     Given User goes to homepage.
     * User verifies that Cookies popup is visible.
@@ -8,7 +8,7 @@ Feature: US002 - User can accept or reject cookies.
     * User verify access to cookie policy page.
     * User closes the browser.
 
-  @US002TC02 @US002
+  @US002TC02 @US002 @jenkins
   Scenario: TC02 - User changes and saves cookie settings.
     Given User goes to homepage.
     * User clicks cookies setting.
@@ -23,7 +23,7 @@ Feature: US002 - User can accept or reject cookies.
     * User verify that Cookies popup is not visible.
     * User closes the browser.
 
-  @US002TC03 @US002
+  @US002TC03 @US002 @jenkins
   Scenario: TC03 - User accepts all cookies.
     Given User goes to homepage.
     * User clicks cookies setting.
@@ -32,7 +32,7 @@ Feature: US002 - User can accept or reject cookies.
     * User verify that Cookies popup is not visible.
     * User closes the browser.
 
-  @US002TC04 @US002
+  @US002TC04 @US002 @jenkins
   Scenario: TC04 -  User accesses actions on cookie settings.
     Given User goes to homepage.
     * User clicks cookies setting.
@@ -49,7 +49,7 @@ Feature: US002 - User can accept or reject cookies.
     * User verify that Zorunlu Tanimlama Bilgileri field detail has been closed.
     * User closes the browser.
 
-  @US002TC05 @US002
+  @US002TC05 @US002 @jenkins
   Scenario: TC05 -  User closes cookie settings popup.
     Given User goes to homepage.
     * User clicks cookies setting.
@@ -58,7 +58,7 @@ Feature: US002 - User can accept or reject cookies.
     * User verify that Cookies popup is visible.
     * User closes the browser.
 
-  @US002TC06 @US002
+  @US002TC06 @US002 @jenkins
   Scenario: TC06 -  User accepts cookies.
     Given User goes to homepage.
     * User clicks Kabul Et button in cookies popup.
