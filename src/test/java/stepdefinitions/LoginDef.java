@@ -31,13 +31,5 @@ public class LoginDef {
     public void user_enters_in_username_textbox(String string) {
         homePage.loginUsernameText.sendKeys(ConfigReader.getProperty(string));
     }
-    @Given("User {string} enters in Password textbox.")
-    public void user_enters_in_password_textbox(String string) {
 
-    }
-    @Given("User sees an alert that {string}.")
-    public void user_sees_an_alert_that(String string) {
-        // Write code here that turns the phrase above into concrete actions
-        throw new io.cucumber.java.PendingException();
-    }
 }

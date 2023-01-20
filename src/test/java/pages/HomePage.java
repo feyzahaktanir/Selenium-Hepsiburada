@@ -28,7 +28,7 @@ public class HomePage {
     public WebElement cookieAccept;
     @FindBy(id = "onetrust-pc-btn-handler")
     public WebElement cookieSettings;
-    @FindBy(id = "ot-pc-title")
+    @FindBy(id = "ot-pc-titled") //d kalkacak!!
     public WebElement cookieSettingsTitle;
     @FindBy(xpath = "//a[@class=\"privacy-notice-link\"]")
     public WebElement cookieMoreInfo;
@@ -152,7 +152,9 @@ public class HomePage {
     @FindBy(xpath = "//div[@id=\"txtUserName\"]")
     public WebElement loginUsernameAlert;
     @FindBy(xpath = "//div[text()=\"E-posta adresinizi veya telefon numaranızı girmelisiniz.\"]")
-    public WebElement loginUsernameAlert_Text;
+    public WebElement loginUsernameAlert_Down;
+    @FindBy(xpath = "//div[text()=\"E-posta adresinizi veya telefon numaranızı girmelisiniz.\"]")
+    public WebElement loginUsernameAlert_Up;
 
     @FindBy(xpath = "//div[text()=\"Yeni giriş yöntemi!\"]")
     public WebElement loginNewLoginMethodAlert;
