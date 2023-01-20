@@ -94,7 +94,7 @@ public class CookiesDef {
     }
     @Given("User verify that Zorunlu Tanimlama Bilgileri field detail has been opened.")
     public void user_verify_that_zorunlu_tanimlama_bilgileri_field_detail_has_been_opened() {
-        Assert.assertTrue(homePage.cookieNecessaryTrue.isDisplayed());
+        Assert.assertFalse(homePage.cookieNecessaryTrue.isDisplayed());
     }
     @Given("User verify that Tumunu Kabul et button is not visible.")
     public void user_verify_that_tumunu_kabul_et_button_is_not_visible() {

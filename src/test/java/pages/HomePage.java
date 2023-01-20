@@ -28,7 +28,7 @@ public class HomePage {
     public WebElement cookieAccept;
     @FindBy(id = "onetrust-pc-btn-handler")
     public WebElement cookieSettings;
-    @FindBy(id = "ot-pc-titled") //d kalkacak!!
+    @FindBy(id = "ot-pc-title")
     public WebElement cookieSettingsTitle;
     @FindBy(xpath = "//a[@class=\"privacy-notice-link\"]")
     public WebElement cookieMoreInfo;
