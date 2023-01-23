@@ -151,10 +151,11 @@ public class HomePage {
     public WebElement loginUsernameText;
     @FindBy(xpath = "//div[@id=\"txtUserName\"]")
     public WebElement loginUsernameAlert;
-    @FindBy(xpath = "//div[text()=\"E-posta adresinizi veya telefon numaranızı girmelisiniz.\"]")
-    public WebElement loginUsernameAlert_Down;
-    @FindBy(xpath = "//div[text()=\"E-posta adresinizi veya telefon numaranızı girmelisiniz.\"]")
+    @FindBy(xpath = "//div[@class='hb-fzplVX cJJc scmzyt281h9']")
+    public WebElement loginUsernameAlert_Empty;
+    @FindBy(xpath = "//div[@class='hb-AxhfK jcHAEX skpxjue2y5j']")
     public WebElement loginUsernameAlert_Up;
+
 
     @FindBy(xpath = "//div[text()=\"Yeni giriş yöntemi!\"]")
     public WebElement loginNewLoginMethodAlert;
