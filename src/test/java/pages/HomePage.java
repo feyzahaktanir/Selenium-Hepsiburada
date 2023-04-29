@@ -14,7 +14,7 @@ public class HomePage {
         PageFactory.initElements(Driver.getDriver(),this);
     }
 
-    @FindBy (xpath = "//img[@alt=\"Desktop-Logo\"]")
+    @FindBy (xpath = "//a[@title=\"Hepsiburada\"]")
     public WebElement hbLogo;
 
     //Cookies definitions ---------------------------------------------------------

@@ -1,43 +1,47 @@
 package utilities;
 
 import io.github.bonigarcia.wdm.WebDriverManager;
+import io.github.bonigarcia.wdm.managers.OperaDriverManager;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
+import org.openqa.selenium.chrome.ChromeOptions;
 import org.openqa.selenium.firefox.FirefoxDriver;
 import org.openqa.selenium.safari.SafariDriver;
 
 
 import java.time.Duration;
+import java.util.Collections;
 
 public class Driver {
 
     public Driver(){}
 
-    public static WebDriver driver;
+    public static WebDriver driver = null;
 
     public static WebDriver getDriver(){
         if (driver == null) {
             switch (ConfigReader.getProperty("browser")){
                 case "chrome":
                     WebDriverManager.chromedriver().setup();
-                    driver = new ChromeDriver();
+                    ChromeOptions options = new ChromeOptions();
+                    options.addArguments("--remote-allow-origins=*");
+                    options.addArguments("--disable-notifications");
+                    driver = new ChromeDriver(options);
                     break;
                 case "firefox":
                     WebDriverManager.firefoxdriver().setup();
                     driver = new FirefoxDriver();
                     break;
 //                case "opera":
-//                    WebDriverManager.operadriver().setup();
+//                    OperaDriverManager.operadriver().setup();
 //                    driver = new OperaDriver();
 //                    break;
                 case "safari":
                     WebDriverManager.safaridriver().setup();
                     driver = new SafariDriver();
                     break;
-                default:
-                    WebDriverManager.chromedriver().setup();
-                    driver = new ChromeDriver();
             }
+            return driver;
         }
 
         driver.manage().window().maximize();
