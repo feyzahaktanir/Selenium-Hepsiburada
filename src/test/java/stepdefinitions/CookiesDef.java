@@ -15,7 +15,13 @@ public class CookiesDef {
     }
     @Given("User accesses the cookie policy.")
     public void user_accesses_the_cookie_policy() {
-        homePage.cookiePolicy.click();
+        try {
+            homePage.cookiePolicy.click();
+        }
+        catch (Exception e){
+            JavascriptExecutor executor = (JavascriptExecutor) Driver.driver;
+            executor.executeScript("arguments[0].click();", homePage.cookiePolicy);
+        }
     }
     @Given("User verify access to cookie policy page.")
     public void user_verify_access_to_cookie_policy_page() {
@@ -24,7 +30,13 @@ public class CookiesDef {
 
     @Given("User clicks cookies setting.")
     public void user_clicks_cookies_setting() {
-        homePage.cookieSettings.click();
+        try {
+            homePage.cookieSettings.click();
+        }
+        catch (Exception e){
+            JavascriptExecutor executor = (JavascriptExecutor) Driver.driver;
+            executor.executeScript("arguments[0].click();", homePage.cookieSettings);
+        }
         homePage.wait(5);
     }
     @Given("User verifies that Cookies Settings popup is visible.")
@@ -137,6 +149,12 @@ public class CookiesDef {
     }
     @Given("User clicks Kabul Et button in cookies popup.")
     public void user_clicks_kabul_et_button_in_cookies_popup() {
-        homePage.cookieAccept.click();
+        try {
+            homePage.cookieAccept.click();
+        }
+        catch (Exception e){
+            JavascriptExecutor executor = (JavascriptExecutor) Driver.driver;
+            executor.executeScript("arguments[0].click();", homePage.cookieAccept);
+        }
     }
 }

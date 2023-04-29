@@ -142,30 +142,7 @@ public class HomePage {
 
 
     //Login Locations -----------------------------------------------------------
-    @FindBy(xpath = "//a[@id=\"login\"]")
-    public WebElement loginButton;
-    @FindBy(xpath = "//button[@id=\"btnLogin\"]")
-    public WebElement loginTitle;
 
-    @FindBy(xpath = "//input[@id=\"txtUserName\"]")
-    public WebElement loginUsernameText;
-    @FindBy(xpath = "//div[@id=\"txtUserName\"]")
-    public WebElement loginUsernameAlert;
-    @FindBy(xpath = "//div[@class='hb-fzplVX cJJc scmzyt281h9']")
-    public WebElement loginUsernameAlert_Empty;
-    @FindBy(xpath = "//div[@class='hb-AxhfK jcHAEX skpxjue2y5j']")
-    public WebElement loginUsernameAlert_Up;
-
-
-    @FindBy(xpath = "//div[text()=\"Yeni giriş yöntemi!\"]")
-    public WebElement loginNewLoginMethodAlert;
-    @FindBy(xpath = "//div[@class=\"hb-AxhVE FCk scuy8ndz9zp\"]")
-    public WebElement loginNewLoginMethodAlert_Close;
-
-    @FindBy(id = "btnLogin")
-    public WebElement loginButtonUsername;
-    @FindBy(id = "btnEmailSelect")
-    public WebElement loginButtonPassword;
 
     //-----------------------------------------------------------------------------
 }
